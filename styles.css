@@ -87,8 +87,15 @@ header {
   top: 50%;
   transform: translateY(-50%);
   font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(46, 45, 45, 0.1);
+}
+svg {
+  width: 16px;
+  margin: 0 10px;
 }
 .how-it-works li:hover {
-  background-color: #e4d4f7;
+  background-color: #e4d5f5;
+}
+.how-it-works li:hover svg {
+  fill: #9356dc;
 }
