@@ -56,16 +56,17 @@ header {
   background-image: linear-gradient(170deg, #ff79da 50%, #9356dc 100%);
 }
 /* HomePage - How it works - list */
-.how-it-works {
+#how-it-works,
+#restaurant-list {
   margin: 30px;
 }
-.how-it-works ol {
+#how-it-works ol {
   list-style-type: none;
   padding: 10px;
   counter-reset: step;
 }
 /* list box */
-.how-it-works li {
+#how-it-works li {
   background-color: #f7f7f7;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -75,7 +76,7 @@ header {
   display: flex;
 }
 /* List number */
-.how-it-works li:before {
+#how-it-works li:before {
   content: counter(step);
   counter-increment: step;
   background-color: #9356dc;
@@ -92,13 +93,101 @@ header {
   transform: translateY(-50%);
   font-size: 12px;
 }
-svg {
+#how-it-works svg {
   width: 16px;
   margin: 0 10px;
 }
-.how-it-works li:hover {
+#how-it-works li:hover {
   background-color: #e4d5f5;
 }
-.how-it-works li:hover svg {
+#how-it-works li:hover svg {
   fill: #9356dc;
+}
+/* Restaurant list */
+#restaurant-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 200px;
+  gap: 20px;
+}
+.card {
+  flex: 0 0 calc(50% - 20px);
+  margin: 10px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image {
+  position: relative;
+  flex: 1;
+}
+
+.image img {
+  width: 100%;
+  /* height: auto; */
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.label {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background-color: #99e2d0;
+  color: white;
+  padding: 5px 20px;
+}
+
+.content {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.content h3 {
+  margin-top: 0;
+}
+
+#restaurant-list .icon {
+  text-align: right;
+  padding: 5px 15px;
+  background-color: #fff;
+  font-size: 20px;
+}
+#restaurant-list .icon i:hover {
+  color: #ff79da;
+}
+/* Footer */
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer svg {
+  position: relative;
+  background-color: white;
+}
+.footer i {
+  margin-right: 10px;
+}
+.diagonal-icon i {
+  position: relative;
+  left: 8px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  margin-right: 5px;
+}
+
+.footer p {
+  margin: 0;
+  padding: 5px 10px;
 }
