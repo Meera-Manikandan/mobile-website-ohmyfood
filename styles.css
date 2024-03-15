@@ -1,9 +1,9 @@
 body {
   font-family: "Roboto", sans-serif;
-  /* font-size: 18px; */
   margin: 0;
   padding: 0;
 }
+/* HomePage - Logo */
 header {
   text-align: center;
   background-color: white;
@@ -17,6 +17,7 @@ header {
   max-width: 150px;
   height: auto;
 }
+/* HomePage - Location */
 .location {
   display: flex;
   align-items: center;
@@ -28,8 +29,9 @@ header {
 .location i {
   margin-right: 10px;
 }
+/* HomePage - Restaurant Description */
 .description {
-  background-color: #f7f7f7; /* Gray background */
+  background-color: #f7f7f7;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   padding: 40px 0;
   text-align: center;
@@ -39,6 +41,7 @@ header {
   letter-spacing: 1px;
   padding: 10px;
 }
+/* HomePage - Explore our restaurant - Button */
 .gradient-button {
   padding: 10px 20px;
   font-size: 16px;
@@ -52,25 +55,26 @@ header {
 .gradient-button:hover {
   background-image: linear-gradient(170deg, #ff79da 50%, #9356dc 100%);
 }
+/* HomePage - How it works - list */
 .how-it-works {
-  margin: 20px;
+  margin: 30px;
 }
 .how-it-works ol {
   list-style-type: none;
   padding: 10px;
   counter-reset: step;
 }
+/* list box */
 .how-it-works li {
   background-color: #f7f7f7;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 20px 15px;
   position: relative;
+  display: flex;
 }
-.how-it-works i {
-  margin: 0 10px;
-}
+/* List number */
 .how-it-works li:before {
   content: counter(step);
   counter-increment: step;
@@ -86,8 +90,7 @@ header {
   left: -15px;
   top: 50%;
   transform: translateY(-50%);
-  font-weight: bold;
-  box-shadow: 0 2px 4px rgba(46, 45, 45, 0.1);
+  font-size: 12px;
 }
 svg {
   width: 16px;
