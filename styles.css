@@ -3,6 +3,11 @@ body {
   margin: 0;
   padding: 0;
 }
+.footer .shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 300;
+  font-style: normal;
+}
 /* HomePage - Logo */
 header {
   text-align: center;
@@ -57,8 +62,8 @@ header {
 }
 /* HomePage - How it works - list */
 #how-it-works,
-#restaurant-list {
-  margin: 30px;
+.restaurant-cards {
+  margin: 40px;
 }
 #how-it-works ol {
   list-style-type: none;
@@ -109,48 +114,53 @@ header {
   flex-direction: column;
   justify-content: space-around;
   margin-bottom: 200px;
-  gap: 20px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.card {
+#restaurant-list .card {
   flex: 0 0 calc(50% - 20px);
-  margin: 10px;
+  margin: 30px 5px;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.card .container {
+#restaurant-list .card .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 }
-.image {
+#restaurant-list .image {
   position: relative;
-  flex: 1;
 }
 
-.image img {
+#restaurant-list .image img {
   width: 100%;
-  /* height: auto; */
-  max-height: 250px;
+  max-height: 200px;
   object-fit: cover;
 }
 
-.label {
+#restaurant-list .label {
   position: absolute;
   top: 15px;
-  right: 10px;
+  right: 15px;
   background-color: #99e2d0;
-  color: white;
-  padding: 5px 20px;
+  color: #107159;
+  padding: 5px 25px;
+  border-radius: 5px;
 }
 
-.content {
+#restaurant-list .content {
   padding: 15px;
   background-color: #fff;
 }
 
-.content h3 {
+#restaurant-list .content h3 {
   margin-top: 0;
+}
+
+#restaurant-list .content p {
+  color: lightgray;
 }
 
 #restaurant-list .icon {
@@ -171,10 +181,6 @@ header {
   position: fixed;
   bottom: 0;
   width: 100%;
-}
-.footer svg {
-  position: relative;
-  background-color: white;
 }
 .footer i {
   margin-right: 10px;
