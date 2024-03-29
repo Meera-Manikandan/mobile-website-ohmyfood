@@ -113,7 +113,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-bottom: 200px;
   background-color: #f7f7f7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -178,9 +177,10 @@ header {
   background-color: #000;
   color: #fff;
   padding: 20px;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
+  z-index: 2;
 }
 .footer i {
   margin-right: 10px;
@@ -225,17 +225,18 @@ header {
 .restaurant-menu {
   background-color: #f2efef;
   padding: 20px;
-  border-radius: 40px 40px 0 0;
+  border-radius: 50px 50px 0 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   top: -50px;
+  z-index: 1;
 }
 /* Restaurant name and heart */
 .restaurant-menu h1 {
   display: flex;
   justify-content: space-between;
   font-family: "Shrikhand", serif;
-  font-size: 26px;
+  font-size: 32px;
 }
 /* Menu courses with line below */
 .restaurant-menu h2 {
@@ -247,7 +248,7 @@ header {
 .restaurant-menu h2::after {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -5px;
   left: 0;
   width: calc(1ch * 5);
   border-bottom: 3px solid #99e2d0;
@@ -261,14 +262,20 @@ header {
   background-color: #f7f7f7;
   border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 5px 20px;
+  margin-bottom: 10px;
+  padding: 5px 15px;
   display: block;
 }
 .restaurant-menu p {
   display: flex;
   justify-content: space-between;
+  color: gray;
 }
 .restaurant-menu p span {
   font-weight: bold;
+  color: black;
+}
+.restaurant-menu .order-button {
+  text-align: center;
+  padding: 10px;
 }
