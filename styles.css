@@ -204,17 +204,21 @@ header {
 
 /* MENU PAGE  */
 /* Page header */
-#menu-page header {
-  display: inline-block;
+#menu-page {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .back-link {
-  padding: 0 30px;
+  padding-left: 30px;
   text-decoration: none;
   font-size: 16px;
+}
+.header-child {
+  width: 44px;
 }
 /* Food Image */
 .restaurant-image {
