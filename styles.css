@@ -269,12 +269,48 @@ header {
   padding: 10px;
 }
 .restaurant-menu li {
+  position: relative;
   background-color: #f7f7f7;
   border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   padding: 5px 15px;
   display: block;
+  overflow: hidden;
+  transition: background-color 0.3s, padding-right 0.3s;
+}
+/* Animation */
+.restaurant-menu li::after {
+  content: "\2713"; /* Check mark character */
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  font-size: 20px;
+  transform: translateY(-50%) scale(0); /* Hide initially */
+  color: white;
+  transition: transform 0.3s;
+}
+.restaurant-menu li:hover::after {
+  transform: translateY(-50%) translateX(-50%) scale(1); /* Show check mark */
+}
+.restaurant-menu li:hover {
+  padding-right: 20%;
+  background: linear-gradient(
+    to left,
+    #55efc4 0%,
+    #55efc4 20%,
+    #f7f7f7 20%,
+    #f7f7f7 100%
+  );
+}
+.restaurant-menu h3,
+.restaurant-menu p {
+  transition: transform 0.5s;
+}
+/* Push contents to the left */
+.restaurant-menu li:hover span {
+  transform: translateX(-10%);
+  padding-right: 10px;
 }
 .restaurant-menu p {
   display: flex;
