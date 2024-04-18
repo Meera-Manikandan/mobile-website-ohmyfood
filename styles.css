@@ -279,7 +279,52 @@ header {
   overflow: hidden;
   transition: background-color 0.3s, padding-right 0.3s;
 }
-/* Animation */
+/* Loading Spinner */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  animation: disappear 2s;
+  animation-fill-mode: forwards;
+}
+.loading-screen .spinner {
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  animation: spin 2s linear infinite;
+
+  border-radius: 100vw;
+  border: 8px solid whitesmoke;
+  border-bottom: none;
+  border-left: none;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+/* Menu list on hover pulls in a check */
 .restaurant-menu li::after {
   content: "\2713"; /* Check mark character */
   position: absolute;
