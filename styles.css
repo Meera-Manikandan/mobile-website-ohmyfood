@@ -79,6 +79,7 @@ header {
   padding: 20px 15px;
   position: relative;
   display: flex;
+  z-index: -10;
 }
 /* List number */
 #how-it-works li:before {
@@ -204,6 +205,9 @@ header {
 
 /* MENU PAGE  */
 /* Page header */
+.menu {
+  background-color: #f2efef;
+}
 #menu-page {
   display: flex;
   align-items: center;
@@ -235,7 +239,6 @@ header {
   background-color: #f2efef;
   padding: 20px;
   border-radius: 50px 50px 0 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   top: -50px;
   z-index: 1;
