@@ -281,7 +281,7 @@ header {
   display: block;
   overflow: hidden;
   transition: background-color 0.3s, padding-right 0.3s;
-  animation: slideIn 2s ease-in-out; /* Apply animation to all li elements */
+  animation: slideIn 2s ease-in-out; /* Slow slideIn to all li elements */
 }
 /* Loading Spinner */
 .loading-screen {
@@ -328,48 +328,38 @@ header {
     display: none;
   }
 }
-/* Menu list on hover pulls in a check */
-.restaurant-menu li::after {
-  content: "\2713"; /* Check mark character */
+/* Green Box Drawer */
+.restaurant-menu li::before {
+  content: "";
   position: absolute;
-  top: 50%;
-  right: 5%;
-  font-size: 20px;
-  transform: translateY(-50%) translateX(100%) rotate(180deg) scale(1); /* Hide first */
-  color: white;
-  background-color: #ffffff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  top: 0;
+  right: -80px;
+  bottom: 0;
+  width: 80px;
+  background-color: #99e2d0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 1s, background-color 2s;
+  transition: right 0.8s;
 }
-/* Show check mark */
-.restaurant-menu li:hover::after {
-  transform: translateY(-40%) translateX(-40%) rotate(360deg) scale(1);
-  color: #55efc4;
+
+.restaurant-menu li:hover::before {
+  right: 0;
 }
-.restaurant-menu li:hover {
-  padding-right: 20%;
-  background: linear-gradient(
-    to left,
-    #55efc4 0%,
-    #55efc4 20%,
-    #f7f7f7 20%,
-    #f7f7f7 100%
-  );
+
+.restaurant-menu li:hover::before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free"; /* Font family for the icon */
+  font-size: 30px;
+  color: white;
 }
-.restaurant-menu h3,
-.restaurant-menu p {
-  transition: transform 0.5s;
-}
-/* Push contents to the left */
 .restaurant-menu li:hover span {
-  transform: translateX(-10%);
-  padding-right: 10px;
+  transform: translateX(-80px);
+  transition: right 0.8s;
 }
+
 .restaurant-menu p {
   display: flex;
   justify-content: space-between;
