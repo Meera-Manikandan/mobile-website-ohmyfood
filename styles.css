@@ -363,9 +363,8 @@ header {
 }
 
 .restaurant-menu li:hover::before {
-  content: "\f058";
-  font-family: "Font Awesome 5 Free"; /* Font family for the icon */
-  font-size: 30px;
+  content: "\f058"; /* Checkmark */
+  font-family: "Font Awesome 5 Free";
   color: white;
 }
 .restaurant-menu li:hover span {
@@ -418,4 +417,12 @@ header {
   #how-it-works li {
     width: 30%;
   }
+}
+/* Fill Heart on Hover */
+#heart-icon:hover {
+  content: "\f004"; /* solid heart icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ff79da;
+  transition-duration: 0.5s;
 }
