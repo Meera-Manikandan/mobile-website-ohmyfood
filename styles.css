@@ -293,8 +293,70 @@ header {
   padding: 5px 15px;
   display: block;
   overflow: hidden;
-  transition: background-color 0.3s, padding-right 0.3s;
+  transition: background-color 0.8s, padding-right 0.8s;
   animation: slideIn 2s ease-in-out; /* Slow slideIn to all li elements */
+}
+.restaurant-menu li .checkmark {
+  position: absolute;
+  top: 50%;
+  right: -80px;
+  transform: translateY(-50%) translateX(-50%) rotate(-180deg);
+  color: white;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 26px;
+  transition: right 1s;
+}
+
+/* Green Box Drawer */
+.restaurant-menu li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -80px;
+  bottom: 0;
+  width: 80px;
+  background-color: #99e2d0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: right 0.8s;
+}
+/* On Hover */
+.restaurant-menu li:hover::before {
+  right: 0; /* Move the green box to the visible position */
+}
+.restaurant-menu li:hover .checkmark {
+  right: 0;
+  transform: translateY(-50%) translateX(-95%) rotate(0deg);
+}
+.restaurant-menu li:hover .price {
+  transform: translateX(-75px);
+  transition: right 2s ease-in-out 1s;
+}
+
+.restaurant-menu p {
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+}
+.restaurant-menu p span {
+  font-weight: bold;
+  color: black;
+}
+.restaurant-menu .order-button {
+  text-align: center;
+  padding: 10px;
+}
+/* Slide In of menu list */
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 /* Loading Spinner */
 .loading-screen {
@@ -339,61 +401,6 @@ header {
   100% {
     opacity: 0;
     display: none;
-  }
-}
-/* Green Box Drawer */
-.restaurant-menu li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -80px;
-  bottom: 0;
-  width: 80px;
-  background-color: #99e2d0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: right 0.8s;
-}
-
-.restaurant-menu li:hover::before {
-  right: 0;
-}
-
-.restaurant-menu li:hover::before {
-  content: "\f058"; /* Checkmark */
-  font-family: "Font Awesome 5 Free";
-  color: white;
-}
-.restaurant-menu li:hover span {
-  transform: translateX(-80px);
-  transition: right 0.8s;
-}
-
-.restaurant-menu p {
-  display: flex;
-  justify-content: space-between;
-  color: gray;
-}
-.restaurant-menu p span {
-  font-weight: bold;
-  color: black;
-}
-.restaurant-menu .order-button {
-  text-align: center;
-  padding: 10px;
-}
-/* Slide In of menu list */
-@keyframes slideIn {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 /* Media query for tablet and desktop */
