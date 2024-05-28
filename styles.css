@@ -305,7 +305,7 @@ header {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 26px;
-  transition: right 1s;
+  transition: right 1s, transform 1s;
 }
 
 /* Green Box Drawer */
@@ -331,7 +331,6 @@ header {
 }
 .restaurant-menu li:hover .price {
   transform: translateX(-75px);
-  transition: right 2s ease-in-out 1s;
 }
 
 .restaurant-menu p {
@@ -339,9 +338,10 @@ header {
   justify-content: space-between;
   color: gray;
 }
-.restaurant-menu p span {
+.restaurant-menu p .price {
   font-weight: bold;
   color: black;
+  transition: right 2s, transform 1s;
 }
 .restaurant-menu .order-button {
   text-align: center;
@@ -422,11 +422,11 @@ header {
   }
 
   #how-it-works li {
-    width: 30%;
+    width: 40%;
   }
 }
 /* Fill Heart on Hover */
-#heart-icon:hover {
+.heart-icon:hover {
   content: "\f004"; /* solid heart icon */
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
