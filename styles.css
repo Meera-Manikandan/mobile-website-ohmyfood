@@ -369,10 +369,11 @@ header {
   z-index: 99;
   animation: disappear 2s;
   animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .loading-screen .spinner {
-  margin: 0 auto;
-  margin-top: 150px;
   width: 70px;
   height: 70px;
   background-color: transparent;
@@ -394,13 +395,15 @@ header {
 @keyframes disappear {
   0% {
     opacity: 1;
+    transform: translateY(0);
   }
   99% {
     opacity: 1;
+    transform: translateY(0);
   }
   100% {
     opacity: 0;
-    display: none;
+    transform: translateY(-100%);
   }
 }
 /* Fill Heart on Hover */
