@@ -8,6 +8,10 @@ body {
   font-weight: 300;
   font-style: normal;
 }
+body,
+html {
+  overflow-x: hidden;
+}
 /* HomePage - Logo */
 header {
   background-color: white;
@@ -116,15 +120,22 @@ header {
   justify-content: space-around;
   background-color: #f7f7f7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
+.restaurant-cards,
+.responsive-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .restaurant-list .card {
-  flex: 1 1 calc(100% - 20px);
+  flex: 1 1 100%;
   margin: 20px 0;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.restaurant-list .card .container {
+.restaurant-list .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,11 +143,19 @@ header {
 }
 .restaurant-list .image {
   position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 .restaurant-list .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-height: 200px;
+  /* max-height: 200px; */
   object-fit: cover;
 }
 
@@ -175,7 +194,6 @@ header {
 .card a {
   text-decoration: none;
   color: inherit;
-  display: block;
 }
 
 .card a:hover {
@@ -415,34 +433,22 @@ header {
   transition-duration: 0.5s;
 }
 
-/* Media query for tablet */
+/* Media query for Tablet and desktop screens */
+
 @media (min-width: 768px) {
-  #how-it-works li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #how-it-works li::before {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-
-  #how-it-works ol {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  #how-it-works li {
-    width: 40%;
-  }
-  .restaurant-list {
+  .responsive-container {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
-
   .restaurant-list .card {
     flex: 1 1 calc(50% - 20px);
-    margin: 20px;
+    margin: 10px;
+  }
+}
+/* Desktop and larger screens */
+@media (min-width: 1024px) {
+  .restaurant-list .card {
+    flex: 1 1 calc(50% - 20px);
   }
 }
